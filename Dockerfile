@@ -24,6 +24,3 @@ ADD domain.yml domain.yml
 
 EXPOSE 5005
 CMD ["--help"]
-
-FROM nginx:stable-alpine AS nginx
-COPY ./frontend/ /usr/share/nginx/html/

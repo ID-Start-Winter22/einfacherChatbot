@@ -30,7 +30,7 @@ services:
 
   web:
       image: rasa-frontend:latest
-      build: "./"
+      build: "./frontend/"
       restart: always
       ports:
         - "80:80"
