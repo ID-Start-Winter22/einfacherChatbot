@@ -6,7 +6,6 @@ services:
     build: "./"
     restart: always
     volumes:
-    - ./actions:/app/actions
     - ./data:/app/data
     - ./models:/app/models
     command: bash -c "rm -rf models/* && rm -rf .rasa/* && rasa train && rasa run --enable-api --cors \"*\" -p 8080 --debug"
