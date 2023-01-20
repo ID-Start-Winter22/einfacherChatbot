@@ -15,7 +15,7 @@ RUN pip install --no-cache-dir --upgrade pip
 RUN pip install rasa
 
 # Copy actions folder to working directory
-COPY ./actions /app/actions
+COPY --from=BASE ./actions /app/actions
 
 ADD credentials.yml credentials.yml
 ADD endpoints.yml endpoints.yml
