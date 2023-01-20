@@ -44,6 +44,9 @@ slots:
       entity: to_station
 
 responses:
+  utter_welcome:
+  - text: Hi there! What can I help you with today?
+
   utter_greet:
   - text: "Hallo wie geht es Dir?"
   - text: "Servus, wie isses?"
