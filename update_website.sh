@@ -15,6 +15,7 @@ then # updated frontend is in use
     sed -i -e "s/localhost/$IP/g" static/js/constants.js    
     sed -i -r 's/(\b[0-9]{1,3}\.){3}[0-9]{1,3}\b'/"$IP"/ static/js/constants.js # if the IP is not aliased, or has already been changed.
     sudo cp -r $DIR /var/www/html
+    sudo cp welcome.js /var/www/html
 else # default frontend is in use
     echo "$DIR directory does not exist. Replace localhost with $IP in index.html..."
     sed -i -e "s/localhost/$IP/g" index.html
